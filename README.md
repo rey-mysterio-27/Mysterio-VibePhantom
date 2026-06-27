@@ -39,8 +39,7 @@ cd spy-recon-pro
 pip3 install -r requirements.txt
 
 # Fire up the engine!
-python3 main.py
+python3 Mysterio-vibephantom.py
 
-### 🐧 Option B: Termux (Android)
-To run this stealth suite directly from your Android smartphone via Termux:
+
 
