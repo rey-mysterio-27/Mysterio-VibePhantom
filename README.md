@@ -32,8 +32,8 @@ Open your terminal and execute the following line-by-line commands:
 sudo apt update && sudo apt install git python3 python3-pip -y
 
 # Clone the repository
-git clone [https://github.com/YOUR-USERNAME/spy-recon-pro.git](https://github.com/YOUR-USERNAME/spy-recon-pro.git)
-cd spy-recon-pro
+git clone https://github.com/rey-mysterio-27/Mysterio-VibePhantom.git
+cd Mysterio-VibePhantom
 
 #Create Virtual Environment
 python -m venv venv
