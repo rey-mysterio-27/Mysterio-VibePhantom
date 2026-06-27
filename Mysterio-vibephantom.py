@@ -1,12 +1,15 @@
+import os  # System commands chalane ke liye import kiya
 import sys
 from datetime import datetime
 
+# Importing custom modules
 import network_scanner
 import dns_scanner
 import security_scanner
 import content_scanner
 import meta_scanner
 
+# ANSI Neon Color Palette
 NEON_PURPLE = "\033[38;5;141m"
 CYAN        = "\033[36m"
 GREEN       = "\033[32m"
@@ -15,7 +18,12 @@ RED         = "\033[31m"
 RESET       = "\033[0m"
 BOLD        = "\033[1m"
 
+def clear_terminal():
+    # Windows ke liye 'cls' aur Linux/Termux ke liye 'clear' automatically chalega
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 def mysterio_banner():
+    # Large Cyber-punk style ASCII for MYSTERIO-VIBEPHANTOM
     banner_text = rf"""{NEON_PURPLE}{BOLD}
     __  ___           _            _                 _    _ ____  
    /  |/  /_  _______| |_ ___  ___(_)___       _  __(_)__| | __ ) 
@@ -28,15 +36,16 @@ def mysterio_banner():
     print(f"{CYAN}=" * 68 + f"{RESET}")
     print(f"{NEON_PURPLE}{BOLD} 🔮  MYSTERIO-VIBEPHANTOM v2.0 : ADVANCED INTELLIGENCE SUITE  🔮{RESET}")
     print(f"{CYAN}=" * 68 + f"{RESET}")
-    print(f" 🛠️  {BOLD}Developed By{RESET} : {GREEN}akshat-singh{RESET} (GitHub)")
-    print(f" 📸  {BOLD}Instagram{RESET}    : {YELLOW}@your_insta{RESET}")
+    print(f" 🛠️  {BOLD}Developed By{RESET} : {GREEN}rey-mysterio-27{RESET} (GitHub)")
+    print(f" 📸  {BOLD}Instagram{RESET}    : {YELLOW}@rey.mysterio.27/{RESET}")
     print(f" 🌐  {BOLD}Website{RESET}      : {CYAN}mysterio-27.vercel.app{RESET}")
-    print(f" 📧  {BOLD}Mail{RESET}         : {RED}your-mail@example.com{RESET}")
+    print(f" 📧  {BOLD}Mail{RESET}         : {RED}rey_mysterio_27@wearehackerone.com{RESET}")
     print(f"{CYAN}=" * 68 + f"{RESET}")
     print(f" 🕒  {BOLD}Time Started{RESET} : {YELLOW}{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}{RESET}")
     print(f"{CYAN}=" * 68 + f"{RESET}")
 
 def menu():
+    clear_terminal()  # Banner print hone se theek pehle terminal saaf!
     mysterio_banner()
     target = input(f"\n{BOLD}Enter Target Domain (e.g., example.com): {RESET}").strip()
     target = target.replace("https://", "").replace("http://", "").split('/')[0]
