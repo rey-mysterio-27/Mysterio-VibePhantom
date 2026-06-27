@@ -35,6 +35,10 @@ sudo apt update && sudo apt install git python3 python3-pip -y
 git clone [https://github.com/YOUR-USERNAME/spy-recon-pro.git](https://github.com/YOUR-USERNAME/spy-recon-pro.git)
 cd spy-recon-pro
 
+#Create Virtual Environment
+python -m venv venv
+source venv/bin/activate
+
 # Install essential dependencies
 pip3 install -r requirements.txt
 
